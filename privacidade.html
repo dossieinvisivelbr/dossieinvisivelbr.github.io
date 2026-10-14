@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Dossiê Invisível Publicador</title>
+<meta name="description" content="Como o Dossiê Invisível Publicador trata os dados de acesso às contas do canal.">
+<link rel="icon" type="image/png" href="icone.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header><div class="barra">
+  <a class="marca" href="index.html"><img src="icone.png" alt=""><span>Dossiê Invisível</span></a>
+  <nav aria-label="Páginas">
+    <a href="index.html">Início</a>
+    <a href="termos.html">Termos de Uso</a>
+    <a href="privacidade.html" aria-current="page">Política de Privacidade</a>
+  </nav>
+</div></header>
+
+<main>
+  <h1>Política de Privacidade</h1>
+  <p class="atualizado">Dossiê Invisível Publicador · Atualizada em 14 de outubro de 2026</p>
+
+  <p>Esta política explica quais dados o <strong>Dossiê Invisível Publicador</strong> (“a ferramenta”) acessa, para quê,
+  onde ficam guardados e como o acesso pode ser revogado.</p>
+
+  <h2>1. O que é a ferramenta</h2>
+  <p>A ferramenta é um programa de uso interno do canal Dossiê Invisível. Ela roda no computador do responsável pelo
+  canal e serve para produzir vídeos e enviá-los às contas oficiais do próprio canal no TikTok, no YouTube e no
+  Instagram. Ela não é oferecida ao público, não tem cadastro de usuários e não possui servidores próprios: não existe
+  um banco de dados on-line da ferramenta.</p>
+
+  <h2>2. Dados acessados no TikTok</h2>
+  <p>A conexão com o TikTok é feita pela tela oficial de login do TikTok (OAuth 2.0 com PKCE). O responsável pelo canal
+  vê as permissões pedidas e decide se autoriza. A ferramenta solicita somente:</p>
+  <table>
+    <thead><tr><th>Permissão</th><th>Dados ou ação</th><th>Para quê</th></tr></thead>
+    <tbody>
+      <tr><td data-rotulo="Permissão"><code>user.info.basic</code></td><td data-rotulo="Dados ou ação">Identificador da conta (open_id) e nome de exibição</td>
+          <td data-rotulo="Para quê">Confirmar qual conta foi conectada</td></tr>
+      <tr><td data-rotulo="Permissão"><code>user.info.profile</code></td><td data-rotulo="Dados ou ação">Nome de usuário (@)</td>
+          <td data-rotulo="Para quê">Confirmar que a conta conectada é a do canal; outra conta é recusada</td></tr>
+      <tr><td data-rotulo="Permissão"><code>video.upload</code></td><td data-rotulo="Dados ou ação">Enviar vídeos para os rascunhos da conta</td>
+          <td data-rotulo="Para quê">Enviar vídeos produzidos e aprovados pelo canal; o responsável confere e publica no aplicativo do TikTok</td></tr>
+      <tr><td data-rotulo="Permissão"><code>video.publish</code> (somente se habilitada no futuro)</td><td data-rotulo="Dados ou ação">Publicar vídeos na conta</td>
+          <td data-rotulo="Para quê">Publicar vídeos do canal, sempre com autorização explícita do responsável para cada vídeo</td></tr>
+    </tbody>
+  </table>
+  <p>A ferramenta <strong>não</strong> solicita nem acessa seguidores, mensagens, comentários, curtidas, vídeos de outras
+  pessoas, contatos ou localização.</p>
+
+  <h2>3. Acessos e dados guardados</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Onde fica</th><th>Por quanto tempo</th></tr></thead>
+    <tbody>
+      <tr><td data-rotulo="Item">Tokens de acesso e de renovação do TikTok, e o identificador da conta</td>
+          <td data-rotulo="Onde fica">Arquivo local no computador do responsável, em pasta com acesso restrito ao usuário do Windows</td>
+          <td data-rotulo="Por quanto tempo">Até a desconexão, a revogação ou o vencimento (o acesso vence em 24 horas e é renovado automaticamente; a renovação vale por até 365 dias)</td></tr>
+      <tr><td data-rotulo="Item">Histórico de envios (data, plataforma, identificador do envio, situação e impressão digital do arquivo de vídeo)</td>
+          <td data-rotulo="Onde fica">Arquivo local no computador do responsável</td>
+          <td data-rotulo="Por quanto tempo">Enquanto o projeto do vídeo existir no computador; serve para evitar envios duplicados</td></tr>
+    </tbody>
+  </table>
+  <p>Os tokens não aparecem nas telas nem nos registros da ferramenta e não são enviados a terceiros. Os dados só
+  trafegam entre o computador do responsável e as próprias plataformas, por conexões HTTPS.</p>
+
+  <h2>4. Compartilhamento</h2>
+  <p>A ferramenta não vende, não aluga e não compartilha dados com terceiros. Os vídeos e os textos de cada publicação
+  são enviados somente à plataforma escolhida, quando o responsável autoriza aquele envio.</p>
+
+  <h2>5. Outras plataformas conectadas</h2>
+  <p>Seguindo os mesmos princípios, a ferramenta também se conecta, pelos logins oficiais, às contas do canal em:</p>
+  <ul>
+    <li><strong>YouTube</strong> (Google): permissões para enviar vídeos e miniaturas, ver a conta do canal e, quando
+    autorizado, alterar a visibilidade de um vídeo (privado, público ou agendado).</li>
+    <li><strong>Instagram</strong> (Meta): permissões para ver os dados básicos da conta profissional do canal e publicar Reels.
+    Quando a publicação no Instagram exige que o vídeo esteja disponível na internet, o arquivo daquele vídeo fica
+    acessível por um endereço HTTPS temporário e aleatório (serviço de túnel da Cloudflare) somente durante a publicação.</li>
+  </ul>
+
+  <h2>6. Como revogar o acesso</h2>
+  <ul>
+    <li><strong>TikTok</strong>: nas configurações de segurança da conta, na lista de aplicativos com permissão, remova o
+    Dossiê Invisível Publicador. O acesso também pode ser encerrado pela própria ferramenta (opção “Desconectar
+    TikTok”), que pede ao TikTok a revogação do acesso e apaga o arquivo local.</li>
+    <li><strong>YouTube</strong>: em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li><strong>Instagram</strong>: nas configurações da conta, em aplicativos e sites conectados.</li>
+  </ul>
+  <p>Depois da revogação, a ferramenta não consegue mais acessar a conta, e o arquivo local de acesso pode ser apagado.</p>
+
+  <h2>7. Proteção dos dados</h2>
+  <ul>
+    <li>Login pelas telas oficiais das plataformas; a ferramenta nunca recebe a senha das contas.</li>
+    <li>Proteção do login do TikTok com PKCE e verificação de “state” contra retornos forjados.</li>
+    <li>Arquivos de acesso guardados em pasta com permissão restrita ao usuário do Windows do responsável.</li>
+    <li>Painel de controle acessível somente no próprio computador, com proteção contra ações enviadas por outras páginas.</li>
+  </ul>
+
+  <h2>8. Este site</h2>
+  <p>Este site é hospedado no GitHub Pages. Ele não usa cookies, formulários nem ferramentas de análise de visitas.
+  O GitHub pode registrar dados técnicos de acesso, conforme a
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">declaração de privacidade do GitHub</a>.</p>
+
+  <h2>9. Alterações</h2>
+  <p>Mudanças nesta política serão publicadas nesta página, com a data de atualização.</p>
+
+  <h2>10. Contato</h2>
+  <p>Dúvidas ou pedidos sobre esta política: <a href="mailto:dossieinvisivel.oficial@gmail.com">dossieinvisivel.oficial@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <span>© Dossiê Invisível</span>
+  <span><a href="index.html">Início</a> · <a href="termos.html">Termos de Uso</a></span>
+</footer>
+</body>
+</html>
